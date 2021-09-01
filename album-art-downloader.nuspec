@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+	<id>album-art-downloader</id>
+	<version>1.05</version>
+	<title>Album Art Downloader (Install)</title>
+	<authors>Alex Vallat, Marc Landis</authors>
+	<owners>chocolatey-community</owners>
+	<licenseUrl>https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/Resources/License.txt?format=raw</licenseUrl>
+	<projectUrl>https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/</projectUrl>
+	<iconUrl>https://cdn.jsdelivr.net/gh/kenscudero/album-art-downloader@main/images/album-art-downloader.png</iconUrl>
+	<requireLicenseAcceptance>true</requireLicenseAcceptance>
+	<description>
+___
+
+### [choco://album-art-downloader](choco://album-art-downloader)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+The [_Album Art Downloader_](https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/) is a program designed to make life easier for anyone who wishes to find and update their album art for their music collection. The sources for the pictures can be defined by creating plugin scripts.
+___
+
+**[PACKAGE NOTES](https://github.com/kenscudero/album-art-downloader/blob/main/README.md)**
+	</description>
+	<summary>The Album Art Downloader is a program designed to make life easier for anyone who wishes to find and update their album art for their music collection. The sources for the pictures can be defined by creating plugin scripts.</summary>
+	<copyright>Copyright © Marc Landis, Alex Vallat 2007 / Damage, Inc. 2005</copyright>
+	<tags>album-art-downloader</tags>
+	<packageSourceUrl>https://github.com/kenscudero/album-art-downloader</packageSourceUrl>
+	<bugTrackerUrl>https://sourceforge.net/projects/album-art/support</bugTrackerUrl>
+	<dependencies>
+	  <dependency id="chocolatey-core.extension" version="1.3.3" />
+	</dependencies>
+  </metadata>
+  <files>
+	<file src="images\album-art-downloader.png" target="images\" />
+	<file src="legal\**" target="legal" />
+	<file src="tools\**" target="tools" />
+  </files>
+</package>
