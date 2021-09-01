@@ -1,3 +1,5 @@
+From: https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/Resources/License.txt?format=raw
+
 		    GNU GENERAL PUBLIC LICENSE
 		       Version 2, June 1991
 
