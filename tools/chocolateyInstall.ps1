@@ -8,7 +8,7 @@ $url		= 'https://managedway.dl.sourceforge.net/project/album-art/album-art-xui/A
 $fileType	= ( $(Split-Path -leaf $url) -split('\.') )[-1].ToUpper()
 $checksum	= '4B0AD1CCA82F3B7BD2D7BBF2F5744AD5305CFA31615C3E584613E6163110D62A'
 $checksumType	= 'sha256'
-$silentArgs	= '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$silentArgs	= '/quiet /S /VERYSILENT'
 
 $packageArgs = @{
   packageName		= $packageName
