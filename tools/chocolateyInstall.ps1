@@ -27,5 +27,4 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
-choco config set --name commandExecutionTimeoutSeconds --value 7500
 Install-ChocolateyPackage @packageArgs
