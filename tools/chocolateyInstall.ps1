@@ -10,6 +10,17 @@ $checksum	= '4B0AD1CCA82F3B7BD2D7BBF2F5744AD5305CFA31615C3E584613E6163110D62A'
 $checksumType	= 'sha256'
 $silentArgs	= '/quiet /S /VERYSILENT'
 
+$helpers = @('helpers')
+foreach ($helper in $helpers) {
+	Write-Verbose "$($MyInvocation.MyCommand):Looking for helper script: $toolsDir\$helper.ps1"
+	if ( ( Test-Path -Path "$toolsDir\$helper.ps1" ) ) {
+		Write-Verbose "$($MyInvocation.MyCommand):Loading helper script: $toolsDir\$helper.ps1"
+		. $toolsDir\$helper.ps1
+	} else {
+		Write-Error -Message "Helper script is not installed: $toolsDir\$helper.ps1" -ErrorAction Stop
+	}
+}
+
 $packageArgs = @{
   packageName		= $packageName
   unzipLocation		= $toolsDir
