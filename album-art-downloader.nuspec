@@ -7,7 +7,7 @@
 	<title>Album Art Downloader (Install)</title>
 	<authors>Alex Vallat, Marc Landis</authors>
 	<owners>chocolatey-community</owners>
-	<licenseUrl>https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/Resources/License.txt?format=raw</licenseUrl>
+	<licenseUrl>https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/Resources/License.txt?view</licenseUrl>
 	<projectUrl>https://sourceforge.net/projects/album-art/</projectUrl>
 	<iconUrl>https://cdn.jsdelivr.net/gh/kenscudero/album-art-downloader@main/images/album-art-downloader.png</iconUrl>
 	<requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -31,7 +31,8 @@ ___
 	<docsUrl>https://hydrogenaud.io/index.php/topic,57392.0.html</docsUrl>
 	<bugTrackerUrl>https://sourceforge.net/projects/album-art/support</bugTrackerUrl>
 	<dependencies>
-	  <dependency id="chocolatey-core.extension" version="1.3.3" />
+	  <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+	  <dependency id="powershell" version="5.1" />
 	</dependencies>
   </metadata>
   <files>
