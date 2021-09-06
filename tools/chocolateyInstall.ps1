@@ -21,6 +21,25 @@ foreach ($helper in $helpers) {
 	}
 }
 
+$sNET_FX_Release_Info = '4.7.2:461808'
+#Write-Verbose "sNET_FX_Release_Info = $( $sNET_FX_Release_Info )"
+$bTest_NETFX_Lib_Installed = ( bTest-NETFX-Lib-Installed $sNET_FX_Release_Info )
+#Write-Verbose "bTest_NETFX_Lib_Installed = $( $bTest_NETFX_Lib_Installed )"
+if ( -not ( $bTest_NETFX_Lib_Installed ) ) {
+	Write-Warning "
+	Microsoft NET Framework Release ($( $sNET_FX_Release_Info.split(':')[0] ))
+	is missing or not Activated.
+"
+	$msg = "
+Cannot install Chocolatey package [$( $packageName )]
+"
+	Write-Error -Message $msg -ErrorAction Stop
+}
+Write-Host "
+Found Microsoft NET Framework Release ($( $sNET_FX_Release_Info.split(':')[0] ) or newer)
+is Installed and Activated!
+"
+
 $packageArgs = @{
   packageName		= $packageName
   unzipLocation		= $toolsDir
