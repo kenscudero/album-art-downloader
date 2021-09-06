@@ -1,5 +1,5 @@
 ﻿# Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.
-$ErrorActionPreference = 'Stop';
+$ErrorActionPreference	= 'Stop';
 
 if ( -not ( Test-Path -Path "$env:ProgramData\Chocolatey" ) ) {
 	Write-Error -Message "Chocolatey is not installed" -ErrorAction Stop
@@ -7,7 +7,7 @@ if ( -not ( Test-Path -Path "$env:ProgramData\Chocolatey" ) ) {
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$helpers = @('get_redirected_uri')
+$helpers = @('Test-NETFX-Lib-Installed','get_redirected_uri')
 foreach ($helper in $helpers) {
 	Write-Verbose "$($MyInvocation.MyCommand):Looking for helper script: $toolsPath\$helper.ps1"
 	if ( ( Test-Path -Path "$toolsPath\$helper.ps1" ) ) {
