@@ -4,11 +4,13 @@ $ErrorActionPreference = 'Stop';
 $toolsDir	= "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageName	= 'album-art-downloader'
+$softwareName	= 'AlbumArtDownloader*'
 $url		= 'https://managedway.dl.sourceforge.net/project/album-art/album-art-xui/AlbumArtDownloaderXUI-1.05.exe'
 $fileType	= ( $(Split-Path -leaf $url) -split('\.') )[-1].ToUpper()
 $checksum	= '4B0AD1CCA82F3B7BD2D7BBF2F5744AD5305CFA31615C3E584613E6163110D62A'
 $checksumType	= 'sha256'
-$silentArgs	= '/S /VERYSILENT'
+$silentArgs	= '/S'
+$validExitCodes	= @(0)
 
 $helpers = @('helpers')
 foreach ($helper in $helpers) {
@@ -42,19 +44,18 @@ is Installed and Activated!
 
 $packageArgs = @{
   packageName		= $packageName
-  unzipLocation		= $toolsDir
   fileType		= $fileType
 
   url			= $url
 
-  softwareName		= 'Album Art Downloader*'
+  softwareName		= $softwareName
 
   checksum		= $checksum
   checksumType		= $checksumType
 
   silentArgs		= $silentArgs
 
-  validExitCodes = @(0)
+  validExitCodes	= $validExitCodes
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyPackage @packageArgs #-UseOnlyPackageSilentArguments
