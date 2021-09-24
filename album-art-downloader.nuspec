@@ -4,7 +4,7 @@
   <metadata>
 	<id>album-art-downloader</id>
 	<version>1.05</version>
-	<title>Album Art Downloader (Install)</title>
+	<title>Album Art Downloader</title>
 	<authors>Alex Vallat, Marc Landis</authors>
 	<owners>chocolatey-community</owners>
 	<licenseUrl>https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/Resources/License.txt?view</licenseUrl>
@@ -12,14 +12,12 @@
 	<iconUrl>https://cdn.jsdelivr.net/gh/kenscudero/album-art-downloader@main/images/album-art-downloader.png</iconUrl>
 	<requireLicenseAcceptance>true</requireLicenseAcceptance>
 	<description>
+The [_Album Art Downloader_](https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/) is a program designed to make life easier for anyone who wishes to find and update their album art for their music collection. The sources for the pictures can be defined by creating plugin scripts.
 ___
 
 ### [choco://album-art-downloader](choco://album-art-downloader)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
-The [_Album Art Downloader_](https://sourceforge.net/p/album-art/code/HEAD/tree/AlbumArt/) is a program designed to make life easier for anyone who wishes to find and update their album art for their music collection. The sources for the pictures can be defined by creating plugin scripts.
-___
-
 **[PACKAGE NOTES](https://github.com/kenscudero/album-art-downloader/blob/main/README.md)**
 	</description>
 	<summary>The Album Art Downloader is a program designed to make life easier for anyone who wishes to find and update their album art for their music collection. The sources for the pictures can be defined by creating plugin scripts.</summary>
@@ -38,6 +36,6 @@ ___
   <files>
 	<file src="images\album-art-downloader.png" target="images\" />
 	<file src="legal\**" target="legal" />
-	<file src="tools\**" target="tools" />
+	<file src="tools\**" target="tools" exclude="**/TestUninstall.ps1" />
   </files>
 </package>
